@@ -26,7 +26,7 @@ public class TestView implements Serializable {
     
     @PostConstruct  
     public void init() {
-        string = "Welcome to PrimeFaces!!!";
+        string = "TreeTable bug demo";
         baseTreeNode= new DefaultTreeNode(new Selection("baseNode"));
         TreeNode unselTreeNode= new DefaultTreeNode(new Selection("unselectable"), baseTreeNode);
         unselTreeNode.setSelectable(false);
