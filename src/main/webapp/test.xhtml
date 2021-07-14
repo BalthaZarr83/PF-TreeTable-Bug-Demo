@@ -13,6 +13,13 @@
 
         <h1>#{testView.string}</h1>
         <h:form id="frmTest">
+            <h:outputText value="Bug: Checkbox gets rendered also for the unselectable node, when filterBy=... is added"/>
+
+            <p:treeTable value="#{testView.baseTreeNode}" var="node" selection="#{testView.selectedTreeNodes}" selectionMode="checkbox">
+                <p:column filterBy="#{node.selectionName}">
+                    <h:outputText value="#{node.selectionName}"/>
+                </p:column>
+            </p:treeTable>
             
         </h:form>
 
